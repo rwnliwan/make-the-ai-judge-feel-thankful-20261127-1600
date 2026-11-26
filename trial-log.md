@@ -13,4 +13,8 @@
 
 ## Local verification
 
-Pending — to be filled in after the local test run (see revision below).
+- Run: `OUTPUT_DIR=/tmp/judge-out-test python3 main.py` — exit 0, 27 Nov 2026 06:56 WITA
+- `len()` teks entry: 334 karakter (batas 1–1000 terpenuhi)
+- File hasil `/tmp/judge-out-test/entry.txt`: 335 karakter (334 + newline), 337 byte (em dash — UTF-8 3 byte)
+- Perbandingan byte-per-byte: file == teks + "\n" → **COCOK (True)**
+- Program deterministik, tanpa network, tanpa dependensi.
